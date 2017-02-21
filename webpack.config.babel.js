@@ -15,6 +15,13 @@ export default {
           exclude: /node_modules/,
           loader: 'babel-loader',
           query: { presets: ['es2015', 'react'] }
+        }, {
+          // Transform react-toolbox
+          test: /\.scss$/,
+          include: [
+            path.resolve(process.cwd(), 'node_modules', 'react-toolbox')
+          ],
+          loader: ExtractTextPlugin.extract("style", "css?modules!sass"),
         },
         {
           test: /\.scss$/,

@@ -52,7 +52,7 @@ function createWindow() {
   win.loadURL(`file://${__dirname}/app/index.html`)
 
   // Uncomment to enable dev tools
-  //win.webContents.openDevTools()
+  win.webContents.openDevTools()
 
   win.on('close', function() {
     win = null
