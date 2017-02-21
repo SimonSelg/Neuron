@@ -1,5 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import {Button} from 'react-toolbox/lib/button'
+import 'react-toolbox/components/commons.scss'
 
 class Hello extends React.Component {
   render() {
@@ -7,6 +9,7 @@ class Hello extends React.Component {
       <div>
         <img src={this.props.image} width={this.props.width} />
         <h1>Welcome to Neuron!</h1>
+        <Button icon='bookmark' label='Bookmark' raised primary />
       </div>
     )
   }
